@@ -6,6 +6,16 @@ namespace LoopForeach{
             foreach(int ele in arr){
                 Console.WriteLine("ele is {0}", ele);
             }
+            Console.WriteLine();
+            for(int i = 0; i < arr.Length; i++){
+                Console.WriteLine("ele is {0}", arr[i]);
+            }
+            int count = 0;
+            foreach(int ele in arr){
+                count += 1;
+                Console.WriteLine("Element #{0}:{1}", count, ele);
+            }
+            Console.WriteLine("Element #{0}", count);
         }
     }
 }
