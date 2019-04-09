@@ -1072,3 +1072,447 @@ namespace StringApplication{
     }
 }
 ```
+### 属性
+|属性名称|描述|
+|--------|----|
+|Chars|在当前String对象中获取Char对象的指定对象|
+|Length|在当前的String对象中获取字符数|
+### 类的方法
+|方法名称|描述|
+|--------|----|
+|public static int Compare(string strA, string strB)|比较两个指定的string对象，并返回一个表示它们在排列顺中相对位置的整数，该方法区分大小写|
+|public static int Compare(string strA, string strB, bool ignoreCase)|比较两个指定的string对象，并返回一个表示它们在排列顺序中相对位置的整数，但是，如果布尔参数为真时，该方法不区分大小写|
+|public static string Concat(string str0, string str1)|连击两个string对象|
+|public static string Concat(string str0, string str1, string str2)|连击三个string对象|
+|public static string Concat(string str0, string str1, string str2, string str3)|连接四个string对象|
+|public bool Contains(string value)|返回一个表示指定string对象是否出现在字符串中的值|
+|public static string Copy(string str)|创建一个与指定字符串具有相同值的新的String对象|
+|public void CopyTo(int sourceindex, char[] destination, int destinationIndex, int countt)|从string对象指定的位置开始服务指定数量的字符串到Unicode字符数组中的指定位置|
+|public bool EndsWidth(string value)|判断string对象是否与指定的string对象具有相同的值|
+|public static bool Equals(string a, string b)|判断两个指定的string对象是否具有相同的值|
+|public stati string Format(string format, Object arg0)|把指定字符串中一个或多个格式项替换为指定对象的字符串表示形式|
+|public int IndexOf(char value)|返回指定Unicode字符在当前字符串中第一次出现的索引，索引从0开始|
+|public int IndexOf(string value)|返回指定字符串在该实例中第一次出现的索引，索引从0开始|
+|public int IndexOf(string value, int startIndex)|返回指定字符串从该实例中指定字符位置开始搜索第一次出现的索引，索引从0开始|
+|public int IndexOf(char value, int startIndex)|返回指定Unicode字符从该实例中指定字符位置开始搜索第一次出现的索引，索引从0开始|
+|public int IndexOfAny(char[] anyOf)|返回某一个指定Unicode字符数组中任意字符在该实例中第一次出现的索引，索引从0开始|
+|public int IndexOfAnd(char[] anyOf, int startIndex)|返回某一个指定的Unicode字符数组中任意字符从该实例中指定字符位置开始搜索第一次出现的索引，索引从0开始|
+|public string Insert(int sstartIndex, string value)|返回一个新的字符串，其中，指定字符串被插入在当前string对象的指定索引位置|
+|public static bool IsNullOrEmpty(string value)|指示指定的字符串是否为null或者是否为一个空的字符串|
+|public static string Join(string separator, string[] value)|连接一个字符串数组中所有元素，使用指定的分隔每个元素|
+|public static string Join(string ssparator, string[] value, int startIndex, int count)|连接一个字符串数组中的指定位置开始的指定元素，使用指定的分隔符分隔每个元素|
+|public int LastIndexOf(char value)|返回指定Unicode字符在当前string对象中最后一次出现的索引位置，索引从0开始|
+|public int LastIndexOf(string value)|返回指定字符串在当前string对象中最后一次出现的索引位置，索引从0开始|
+|public string Remove(int startIndex)|移除当前实例中的所有字符，从指定位置开始，一直到最后一个位置为止，并返回字符串|
+|public string Remove(int startIndex, int count)|从当前字符串的指定位置开始移除指定数量的字符串，并返回字符串|
+|public string Replace(char oldChar, char new Char)|把当前string对象中， 所有指定的Unicode字符替换为另一个指定的Unicode字符，并返回新的字符串|
+|public string Replace(string oldValue, string newValue)|把当前string对象中，索引指定的字符串替换为另一个指定的字符串，并返回新的字符串|
+|public string[] Split(params char[] separator)|返回一个字符串数组，包含当前的string对象中的子字符串， 子字符串是使用指定的Unicode字符数组中的元素进行分隔的|
+|public string[] Split(char[] separator, int count)|返回一个字符串数组，包含当前的string对象中的子字符串，子字符串是使用指定的Unicode字符数组中的元素进行分隔的。int参数指定要返回的子字符串的最大数目|
+|public bool StartsWith(string value)|判断字符串实例的开通是否匹配指定的字符串|
+|public char[] ToCharArray()|返回一个带有当前string对象中所有字符的Unicode字符数组|
+|public char[] ToCharArray(int startIndex, int length)|返回一个带有当前string对象中所有字符的Unicode字符数组，从指定的索引开始，直到指定的长度为止|
+|public string ToLower()|百字符串转换为小写并返回|
+|public string ToUpper()|把字符串转换为大写并返回|
+|public string Trim()|移除当前string对象中索引前导空白字符和后置空白字符|
+```cs
+using System;
+namespace StringApplication{
+    class StringProg{
+        static void Main(string[] args){
+            string str1 = "This is test";
+            string str2 = "This is text";
+            if(String.Compare(str1, str2) == 0){
+                Console.WriteLine(str1 + " and " + str2 + " are equal.");
+            }
+            else{
+                Console.WriteLine(str1 + " and " + str2 + " are not equal.");
+            }
+        }
+    }
+}
+```
+```cs
+using System;
+namespace StringApplication{
+    class StringProg{
+        static void Main(string[] args){
+            string str = "Last night I dreamt of San Pedro";
+            Console.WriteLine(str);
+            string substr = str.Substring(23);
+            Console.WriteLine(substr);
+        }
+    }
+}
+```
+获取子字符串
+```cs
+using System;
+namespace StringApplication{
+    class StringProg{
+        static void Main(string[] args){
+            string str = "Last night I dreamt of San Pedro";
+            Console.WriteLine(str);
+            string substr = str.Substring(23);
+            Console.WriteLine(substr);
+        }
+    }
+}
+```
+连接字符串
+```cs
+using System;
+namespace StringApplication{
+    class StringProg{
+        static void Main(string[] args){
+            string[] starray = new string[]{
+                "Down the way nights are dark",
+                "And the sun shines daily on the mountain top",
+                "I took a trip on a sailing ship",
+                "And when I reached Jamaica",
+                "I made a stop"
+            };
+            string str = String.Join("\n", starray);
+            Console.WriteLine(str);
+        }
+    }
+}
+```
+## 15.结构体(Struct)
+```cs
+struct Books{
+    public string title;
+    public string author;
+    public string subject;
+    public int book_id;
+};
+```
+```cs
+using System;
+using System.Text;
+
+struct Books{
+    public string title;
+    public string author;
+    public string subject;
+    public int book_id;
+};
+public class TestStructure{
+    public static void Main(string[] args){
+        Books b1;
+        Books b2;
+
+        b1.title = "C Programming";
+        b1.author = "Nuha Ali";
+        b1.subject = "C Programming Tutorial";
+        b1.book_id = 6495407;
+
+
+        b2.title = "Telecom Billing";
+        b2.author = "Zara Ali";
+        b2.subject = "Telecom Billing Tutorial";
+        b2.book_id = 6495700;
+
+        /*打印b1信息*/
+        Console.WriteLine("book1 title:{0}", b1.title);
+        Console.WriteLine("book1 author:{0}", b1.author);
+        Console.WriteLine("book1 subject:{0}", b1.subject);
+        Console.WriteLine("book1 book_id:{0}", b1.book_id);
+
+        /*打印b2信息*/
+        Console.WriteLine("book2 title:{0}", b2.title);
+        Console.WriteLine("book2 author:{0}", b2.author);
+        Console.WriteLine("book2 subject:{0}", b2.subject);
+        Console.WriteLine("book2 book_id:{0}", b2.book_id);
+    }
+
+}
+```
+### 类vs结构
+- 类是引用类型，结构是值类型
+- 结构不支持继承
+- 结构不能声明默认的构造函数
+```cs
+using System;
+using System.Text;
+
+struct Books{
+    private string title;
+    private string author;
+    private string subject;
+    private int book_id;
+    public void getValues(string t, string a, string s, int id){
+        title = t;
+        author = a;
+        subject = s;
+        book_id = id;
+    }
+    public void display(){
+        Console.WriteLine("Title:{0}", title);
+        Console.WriteLine("Author:{0}", author);
+        Console.WriteLine("Subject:{0}", subject);
+        Console.WriteLine("Book_id:{0}", book_id);
+    }
+};
+public class TestStructure{
+    public static void Main(string[] args){
+        Books b1 = new Books();
+        Books b2 = new Books();
+        b1.getValues("C Programming", "Nuha Ali", "C Programming Tutorial", 6495407);
+        b2.getValues("Telecom Billing", "Zara Ali", "Telecom Billing Tutorial", 6495700);
+        b1.display();
+        b2.display();
+    }
+}
+```
+## 16.枚举(Enum)
+枚举是椅子命名整型常量
+```cs
+enum Days {Sun, Mon, Tue, Web, Thu, Fri, Sat};
+```
+```cs
+using System;
+public class EnumTest{
+    enum Day {Sun, Mon, Tue, Web, Thu, Fri, Sat};
+    static void Main(){
+        int x = (int)Day.Sun;
+        int y = (int)Day.Fri;
+        Console.WriteLine("Sum={0}", x);
+        Console.WriteLine("Fri={0}", y);
+    }
+}
+```
+## 17.类(Class)
+
+### 类的定义
+```cs
+using System;
+namespace BoxApplication{
+    class Box{
+        public double length;
+        public double breadth;
+        public double height;
+    }
+    class Boxtester{
+        static void Main(string[] args){
+            Box b1 = new Box();
+            Box b2 = new Box();
+            double volume = 0.0;
+
+            b1.height = 5.0;
+            b1.length = 6.0;
+            b1.breadth = 7.0;
+
+            b2.height = 5.0;
+            b2.length = 6.0;
+            b2.breadth = 7.0;
+
+            volume = b1.height * b1.length * b1.breadth;
+            Console.WriteLine("Box1 的体积:{0}", volume);
+
+            volume = b2.height * b2.length * b2.breadth;
+            Console.WriteLine("Box1 的体积:{0}", volume);
+        }
+    }
+}
+```
+### 成员函数和封装
+```cs
+using System;
+namespace BoxApplication{
+    class Box{
+        private double length;
+        private double breadth;
+        private double height;
+        public void setLength(double len){
+            length = len;
+        }
+        public void setBreadth(double bre){
+            breadth = bre;
+        }
+        public void setHeight(double hei){
+            height = hei;
+        }
+        public double getVolume(){
+            return length * breadth * height;
+        }
+
+    }
+    class Boxtester{
+        static void Main(string[] args){
+            Box b1 = new Box();
+            Box b2 = new Box();
+            double volume;
+
+            b1.setLength(6.0);
+            b1.setBreadth(7.0);
+            b1.setHeight(5.0);
+
+            b2.setLength(12.0);
+            b2.setBreadth(13.0);
+            b2.setHeight(10.0);
+
+            Console.WriteLine("Box1的体积:{0}",b1.getVolume());
+            Console.WriteLine("Box2的体积:{0}",b2.getVolume());
+        }
+    }
+}
+```
+### 构造函数
+```cs
+using System;
+namespace LineApplication{
+    class Line{
+        private double length;
+        public Line(){
+            Console.WriteLine("对象已创建");
+        }
+        public void setLength(double len){
+            length = len;
+        }
+        public double getLength(){
+            return length;
+        }
+        static void Main(string[] args){
+            Line line = new Line();
+            line.setLength(6.0);
+            Console.WriteLine("线条的长度:{0}", line.getLength());
+        }
+    }
+}
+```
+
+```cs
+// 参数化构造函数
+using System;
+namespace LineApplication{
+    class Line{
+        private double length;
+        public Line(double len){
+            Console.WriteLine("对象已创建, length={0}", len);
+            length = len;
+        }
+        public void setLength(double len){
+            length = len;
+        }
+        public double getLength(){
+            return length;
+        }
+        static void Main(string[] args){
+            Line line = new Line(10.0);
+            Console.WriteLine("线条的长度:{0}", line.getLength());
+            line.setLength(6.0);
+            Console.WriteLine("线条的长度:{0}", line.getLength());
+        }
+    }
+}
+```
+
+### 析构函数
+```cs
+using System;
+namespace LineApplication{
+    class Line{
+        private double length;
+        public Line(){
+            Console.WriteLine("对象已创建");
+        }
+        ~Line(){
+            Console.WriteLine("对象已经删除");
+        }
+        public void setLength(double len){
+            length = len;
+        }
+        public double getLength(){
+            return length;
+        }
+        static void Main(string[] args){
+            Line line = new Line();
+            line.setLength(6.0);
+            Console.WriteLine("线条的长度:{0}", line.getLength());
+        }
+    }
+}
+```
+### 类的静态成员
+```cs
+using System;
+namespace StaticVarApplication{
+    class StaticVar{
+        public static int num;
+        public void count(){
+            num++;
+        }
+        public int getNum(){
+            return num;
+        }
+    }
+    class StaticTester{
+        static void Main(string[] args){
+            StaticVar s1 = new StaticVar();
+            StaticVar s2 = new StaticVar();
+            s1.count();
+            s1.count();
+            s1.count();
+            s2.count();
+            s2.count();
+            s2.count();
+            Console.WriteLine("s1 的变量num:{0}", s1.getNum());
+            Console.WriteLine("s2 的变量num:{0}", s2.getNum());
+        }
+    }
+}
+```
+静态函数:
+```cs
+using System;
+namespace StaticVarApplication{
+    class StaticVar{
+        public static int num;
+        public void count(){
+            num++;
+        }
+        public static int getNum(){
+            return num;
+        }
+    }
+    class StaticTester{
+        static void Main(string[] args){
+            StaticVar s = new StaticVar();
+            s.count();
+            s.count();
+            s.count();
+            Console.WriteLine("变量num: {0}", StaticVar.getNum());
+        }
+    }
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
