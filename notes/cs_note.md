@@ -1,7 +1,7 @@
 [TOC]
 ## 1.HelloWorld
 
-```c#
+```cs
 using System;
 
 namespace ConsoleApplication1{
@@ -19,7 +19,7 @@ csc helloworld.cs 编译生成helloworld.exe
 mono helloworld.exe 执行helloworld.exe
 
 分析:
-- `using System;` 任何C#程序的第一行都是这句话，用来包含System名称空间,`using`关键字后面跟的应该是要倒入的名称空间.
+- `using System;` 任何cs程序的第一行都是这句话，用来包含System名称空间,`using`关键字后面跟的应该是要倒入的名称空间.
 - `namespace ConsoleApplication1` 声明一个名称空间，名称空间中通常包含了许多类
 - `class Program` 声明一个类
 -  `static void Main(string[] args)` 定义入口函数
@@ -27,7 +27,7 @@ mono helloworld.exe 执行helloworld.exe
 -  `Console.ReadLine` 等待输入
 
 ## 2.基本语法
-```c#
+```cs
 using System;
 namespace RectangleApplication{
     class Rectangle{
@@ -91,7 +91,7 @@ namespace RectangleApplication{
 | ushort | | | |
 
 获取尺寸:
-```c#
+```cs
 using System;
 namespace GetDataSizeApplication{
     class Program{
@@ -111,18 +111,18 @@ namespace GetDataSizeApplication{
 它们指的是一个内存位置，使用多个变量的时候，引用类型可以指向一个内存位置。
 内置的引用类型:object, dynamic, string
 #### String
-```c#
+```cs
 String str = "test string";
 // 逐字字符串
 String str = @"test string";
 ```
 逐字字符串将转义字符(\)当作普通字符对待，比如:
-```c#
+```cs
 string str = @"C:\Windows";
 string str = "C:\\Windows";
 ```
 #### 指针类型
-```C#
+```cs
 type * identifier;
 char* cptr;
 int* iptr;
@@ -132,7 +132,7 @@ int* iptr;
 - 显式类型转换:即强制类型转换，需要强制转换运算符，而强制转换会造成数据丢失
 
 强制类型转换:
-```c#
+```cs
 using System;
 namespace TypeConversionApplication{
     class ExplicitConversion{
@@ -148,7 +148,7 @@ namespace TypeConversionApplication{
 }
 ```
 转换为字符串:
-```c#
+```cs
 using System;
 namespace TypeConversionApplication{
     class StringConversion{
@@ -169,14 +169,14 @@ namespace TypeConversionApplication{
 ```
 ## 5.变量
 定义变量:`data_type variable_list`
-```c#
+```cs
 int d = 3, f = 5;
 byte z = 22;
 double pi = 3.14;
 char x = 'x';
 ```
 变量声明测试:
-```c#
+```cs
 using System;
 namespace VariableDefinition{
     class Program{
@@ -198,7 +198,7 @@ namespace VariableDefinition{
 
 ```
 接受用户输入的值:
-```c#
+```cs
 using System;
 
 namespace TestGetVale{
@@ -217,7 +217,7 @@ namespace TestGetVale{
 定义常量:`const data_type constant_name = value;`
 
 常量定义测试代码:
-```c#
+```cs
 using System;
 namespace DefineConstValue{
     public class ConstTest{
@@ -240,7 +240,7 @@ namespace DefineConstValue{
 }
 ```
 ## 7.运算符
-```c#
+```cs
 using System;
 namespace OperatorsAppl{
     class Program{
@@ -271,7 +271,7 @@ namespace OperatorsAppl{
 ```
 
 自加自减代码测试:
-```c#
+```cs
 using System;
 namespace OperatorAppl{
     class Program{
@@ -310,7 +310,7 @@ namespace OperatorAppl{
 
 ```
 ### 关系运算符
-```C#
+```cs
 using System;
 class Program{
     static void Main(string[] args){
@@ -355,7 +355,7 @@ class Program{
 
 ```
 ### 逻辑运算符
-```c#
+```cs
 using System;
 namespace LogicOperatorAppl{
     class Program{
@@ -387,7 +387,7 @@ namespace LogicOperatorAppl{
 
 ```
 ### 位运算符
-```C#
+```cs
 using System;
 namespace OperatorsAppl{
     class Program{
@@ -414,7 +414,7 @@ namespace OperatorsAppl{
 ```
 ## 8.判断
 if
-```c#
+```cs
 using System;
 namespace DecisionMaking{
     class Program{
@@ -429,7 +429,7 @@ namespace DecisionMaking{
 }
 ```
 switch
-```c#
+```cs
 using System;
 namespace DecisionMaking{
     class Program{
@@ -461,7 +461,7 @@ namespace DecisionMaking{
 ```
 ## 9.循环
 ### while
-```c#
+```cs
 using System;
 namespace LoopWhile{
     class Program{
@@ -477,7 +477,7 @@ namespace LoopWhile{
 }
 ```
 ### for
-```c#
+```cs
 using System;
 namespace LoopFor{
     class Program{
@@ -491,7 +491,7 @@ namespace LoopFor{
 
 ```
 ### foreach
-```c#
+```cs
 using System;
 namespace LoopForeach{
     class Program{
@@ -505,7 +505,7 @@ namespace LoopForeach{
 }
 
 ```
-```c#
+```cs
 using System;
 namespace LoopForeach{
     class Program{
@@ -530,7 +530,7 @@ namespace LoopForeach{
 
 ```
 ### 嵌套循环
-```c#
+```cs
 using System;
 namespace Loops{
     class Program{
@@ -557,7 +557,7 @@ namespace Loops{
 - internal 同一个程序集的对象可以访问
 - protected internal 访问限于当前程序集货或派生自包含类的类型
 ### public
-```c#
+```cs
 using System;
 namespace RectangleApplication{
     class Rectangle{
@@ -585,7 +585,7 @@ namespace RectangleApplication{
 
 ```
 ### private
-```c#
+```cs
 using System;
 namespace RectangleApplication{
     class Rectangle{
@@ -620,7 +620,7 @@ namespace RectangleApplication{
 ```
 
 ### Internal
-```c#
+```cs
 using System;
 namespace RectangleApplication{
     class Rectangle{
@@ -649,7 +649,7 @@ namespace RectangleApplication{
 
 ```
 ## 11.方法
-```c#
+```cs
 using System;
 namespace CalculatorApplication{
     class NumberManipulator{
@@ -672,7 +672,7 @@ namespace CalculatorApplication{
 }
 
 ```
-```c#
+```cs
 using System;
 namespace CalculatorApplication{
     class NumberManipulator{
@@ -697,7 +697,7 @@ namespace CalculatorApplication{
 
 ```
 ### 递归方法调用
-```c#
+```cs
 using System;
 namespace CalculatorApplication{
     class NumberManipulator{
@@ -719,7 +719,7 @@ namespace CalculatorApplication{
 }
 ```
 ### 按值传递参数
-```c#
+```cs
 using System;
 namespace CalculatorApplication{
     class NumberManipulator{
@@ -748,7 +748,7 @@ namespace CalculatorApplication{
 ```
 
 ### 按引用传递参数
-```c#
+```cs
 using System;
 namespace CalculatorApplication{
     class NumberManipulator{
@@ -773,7 +773,7 @@ namespace CalculatorApplication{
 }
 ```
 ### 按输出传递参数
-```c#
+```cs
 using System;
 namespace CalculatorApplication{
     class NumberManipulator{
@@ -792,7 +792,7 @@ namespace CalculatorApplication{
     }
 }
 ```
-```c#
+```cs
 using System;
 namespace CalculaorApplication{
     class NumberMainpulator{
@@ -814,7 +814,7 @@ namespace CalculaorApplication{
 
 ```
 ## 12.可空类型(Nullable)
-```c#
+```cs
 using System;
 namespace CalculatorApplication{
     class NullablesAtShow{
@@ -837,7 +837,7 @@ namespace CalculatorApplication{
 Null 合并运算符用于定义可空类型和引用类型的默认值。Null 合并运算符为类型转换定义了一个预设值，以防可空类型的值为 Null。Null 合并运算符把操作数类型隐式转换为另一个可空（或不可空）的值类型的操作数的类型。
 
 如果第一个操作数的值为 null，则运算符返回第二个操作数的值，否则返回第一个操作数的值。
-```c#
+```cs
 using System;
 namespace CalculatorApplication{
     class NullablesAtShow{
@@ -860,11 +860,11 @@ namespace CalculatorApplication{
 声明数组: `datatype[] arrayName;`
 初始化数组: `datatype[] arrayName = new datatype[length];`
 赋值给数组: `datatype[] arrayName = {};`
-```c#
+```cs
 double[] balance = new double[10];
 balance[0] = 3.14;
 ```
-```c#
+```cs
 using System;
 namespace ArrayApplication{
     class MyArray{
@@ -880,7 +880,7 @@ namespace ArrayApplication{
 
 ```
 ### 多维数组
-```c#
+```cs
 using System;
 namespace TestArray{
     class Program{
@@ -930,7 +930,7 @@ namespace TestArray{
 
 ```
 ### 交错数组
-```c#
+```cs
 // 交错数组
 using System;
 namespace ArrayApplication{
@@ -954,7 +954,7 @@ namespace ArrayApplication{
 
 ```
 ### 传递数组给函数
-```c#
+```cs
 using System;
 namespace ArrayApplication{
     class MyArray{
@@ -981,7 +981,7 @@ namespace ArrayApplication{
 ```
 ### 参数数组
 接收的时候会把参数整理成数组，但是传入的时候并不是以数组的形式传入的。
-```c#
+```cs
 using System;
 namespace ArrayApplication{
     class ParamArray{
@@ -1004,7 +1004,7 @@ namespace ArrayApplication{
 
 ```
 ### Array类
-```c#
+```cs
 /// Array的属性
 // isFixedSize 获取一个值，该值知识数组是否带有固定大小
 // isReadOnly 数组是否只读
@@ -1045,7 +1045,7 @@ namespace ArrayApplication{
 
 ```
 ## 14.字符串
-```c#
+```cs
 using System;
 namespace StringApplication{
     class Program{
