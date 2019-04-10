@@ -1557,8 +1557,107 @@ namespace RectangelApplication{
     }
 }
 ```
+### 多重继承
+```cs
+using System;
+namespace InheritanceApplication{
+    class Shape{
+        public void setWidth(int w){
+            width = w;
+        }
+        public void setHeight(int h){
+            height = h;
+        }
+        protected int width;
+        protected int height;
+    }
+    public interface PaintCost{
+        int getCost(int area);
+    }
+    class Rectangle : Shape, PaintCost{
+        public int getArea(){
+            return width * height;
+        }
+        public int getCost(int area){
+            return area * 70;
+        }
+    }
+    class RectangleTester{
+        static void Main(string[] args){
+            Rectangle r = new Rectangle();
+            int area;
+            r.setWidth(5);
+            r.setHeight(7);
+            area = r.getArea();
+            Console.WriteLine("总面积:{0}", r.getArea());
+            Console.WriteLine("油漆总成本:{0}", r.getCost(area));
+        }
+    }
+}
+```
+## 19.多态性
+- 静态多态性:函数响应是在编译时发生的
+- 动态多态性:函数的响应是在运行时发生的
 
-
+### 静态多态性
+实现静态多态性的两种方式:
+- 函数重载
+- 运算符重载
+### 函数重载
+```cs
+using System;
+namespace PolymorphismApplication{
+    class Printdata{
+        void print(int i){
+            Console.WriteLine("Printing int:{0}", i);
+        }
+        void print(double f){
+            Console.WriteLine("Printing float:{0}", f);
+        }
+        void print(string s){
+            Console.WriteLine("Printing string:{0}", s);
+        }
+        static void Main(string[] args){
+            Printdata p = new Printdata();
+            p.print(5);
+            p.print(500.263);
+            p.print("Hello World");
+        }
+    }
+}
+```
+### 动态多态性
+c#允许使用abstract创建抽象类，抽象类包含抽象方法，抽象方法可被派生类实现。
+规则:
+- 不能创建一个抽象类的实例
+- 不能在抽象类外部声明一个抽象方法
+- 通过在类定义前面放置关键字sealed,可以将类声明为密封类，当一个类被声明为密封类时，它不能被继承，抽象类不能被声明为sealed.
+```cs
+using System;
+namespace PolmorphismApplication{
+    abstract class Shape{
+        abstract public int area();
+    }
+    class Rectangle: Shape{
+        private int length;
+        private int width;
+        public Rectangle(int a = 0, int b = 0){
+            length = a;
+            width = b;
+        }
+        public override int area(){
+            return width * height;
+        }
+    }
+    class RectangleTester{
+        static void Main(string[] args){
+            Rectangle r = new Rectangle(10, 7);
+            double a = r.area();
+            Console.WriteLine("面积:{0}", a);
+        }
+    }
+}
+```
 
 
 
