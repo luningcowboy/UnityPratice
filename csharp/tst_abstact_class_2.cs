@@ -1,7 +1,7 @@
 using System;
 namespace PolymorphismApplication{
     class Shape{
-        protected int wdith, height;
+        protected int width, height;
         public Shape(int a = 0, int b = 0){
             width = a;
             height = b;
@@ -25,6 +25,7 @@ namespace PolymorphismApplication{
             
         }
         public override int area(){
+            Console.WriteLine("Triangle 的面积");
             return width * height / 2;
         }
     }
