@@ -1896,6 +1896,72 @@ namespace OperatorOvlApplication{
     }
 }
 ```
+## 21.接口
+```cs
+using System;
+interface IMyInterface{
+    void MethodToImplement();
+}
+
+class InterfaceImplementer: IMyInterface{
+    static void Main(){
+        InterfaceImplementer iImp = new InterfaceImplementer();
+        iImp.MethodToImplement();
+    }
+    public void MethodToImplement(){
+        Console.WriteLine("MethodToImplement called");
+    }
+}
+```
+```cs
+using System;
+interface IParentInterface{
+    void ParentInterfaceMethod();
+}
+interface IMyInterface : IParentInterface{
+    void MethodToImplement();
+}
+class InterfaceImplementer : IMyInterface{
+    static void Main(){
+        InterfaceImplementer iImp = new InterfaceImplementer();
+        iImp.MethodToImplement();
+        iImp.ParentInterfaceMethod();
+    }
+    public void MethodToImplement(){
+        Console.WriteLine("MethodToImplement called");
+    }
+    public void ParentInterfaceMethod(){
+        Console.WriteLine("ParentInterfaceMethod called");
+
+    }
+}
+```
+## 22.命名空间
+```cs
+using System;
+namespace first_space{
+    class namespace_c1{
+        public void func(){
+            Console.WriteLine("Inside first_space");
+        }
+    }
+}
+namespace second_space{
+    class namespace_c1{
+        public void func(){
+            Console.WriteLine("Inside second_space");
+        }
+    }
+}
+class Test{
+    static void Main(string[] args){
+        first_space.namespace_c1 fc = new first_space.namespace_c1();
+        second_space.namespace_c1 sc = new second_space.namespace_c1();
+        fc.func();
+        sc.func();
+    }
+}
+```
 
 
 
