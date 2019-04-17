@@ -1962,7 +1962,55 @@ class Test{
     }
 }
 ```
+```cs
+using System;
+using first_space;
+using second_space;
 
+namespace first_space{
+    class abc{
+        public void func(){
+            Console.WriteLine("Inside first_space");
+        }
+    }
+}
+namespace second_space{
+    class efg{
+        public void func(){
+            Console.WriteLine("Inside second_space");
+        }
+    }
+}
+class Test{
+    static void Main(string[] args){
+        abc fc = new abc();
+        efg sc = new efg();
+        fc.func();
+        sc.func();
+    }
+}
+```
+```cs
+using System;
+using SomeNameSpace;
+using SomeNameSpace.Nested;
+namespace SomeNameSpace{
+    public class MyClass{
+        static void Main(){
+            Console.WriteLine("In SomeNameSpace");
+            Nested.NestedNameSpaceClass.SayHello();
+        }
+    }
+    namespace Nested{
+        class NestedNameSpaceClass{
+            public static void SayHello(){
+                Console.WriteLine("In Nested");
+            }
+        }
+    }
+    
+}
+```
 
 
 
