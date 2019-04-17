@@ -2126,6 +2126,51 @@ namespace FileIOApplication{
     }
 }
 ```
+## 26.特性
+```cs
+#define DEBUG
+using System;
+using System.Diagnostics;
+public class MyClass{
+    [Conditiona("DEBUG")]
+    public static void Message(string msg){
+        Console.WriteLine(msg);
+    }
+}
+class Test{
+    static void fun1(){
+        MyClass.Message("In fun1");
+        fun2();
+    }
+    static void fun2(){
+        MyClass.Message("In fun2");
+    }
+    public static void Main(){
+        MyClass.Message("In Main function");
+        fun1();
+    }
+}
+```
+```cs
+using System;
+public class MyClass{
+    [Obsolete("Do not use OldMethod, use NewMethod instead", true)]
+    static void OldMethod(){
+        Console.WriteLine("It is OldMethod");
+    }
+    static void NewMethod(){
+        Console.WriteLine("It is NewMethod");
+    }
+    public static void Main(){
+        OldMethod();
+    }
+}
+```
+### 自定义特性
+- 声明自定义特性
+- 构建自定义特性
+- 在目标程序元素上应用自定义特性
+- 通过反射访问特性
 
 
 
