@@ -10,5 +10,9 @@ class Test{
         split("Stevie Ray Vaughan", out a, out b);
         Console.WriteLine(a);
         Console.WriteLine(b);
+        // c# 7 新特性 允许在调用out参数的方法时直接声明变量
+        split("Stevie Ray Vaughan", out string c, out string d);
+        Console.WriteLine(c);
+        Console.WriteLine(d);
     }
 }
