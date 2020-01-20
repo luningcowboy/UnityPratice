@@ -1,0 +1,5 @@
+/Users/tu/self/learn/learn-unity/CSTutorial/CSTutorial/bin/Debug/CSTutorial.exe
+/Users/tu/self/learn/learn-unity/CSTutorial/CSTutorial/bin/Debug/CSTutorial.pdb
+/Users/tu/self/learn/learn-unity/CSTutorial/CSTutorial/obj/Debug/CSTutorial.csprojAssemblyReference.cache
+/Users/tu/self/learn/learn-unity/CSTutorial/CSTutorial/obj/Debug/CSTutorial.exe
+/Users/tu/self/learn/learn-unity/CSTutorial/CSTutorial/obj/Debug/CSTutorial.pdb
