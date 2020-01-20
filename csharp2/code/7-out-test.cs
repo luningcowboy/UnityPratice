@@ -14,5 +14,8 @@ class Test{
         split("Stevie Ray Vaughan", out string c, out string d);
         Console.WriteLine(c);
         Console.WriteLine(d);
+        // 使用 _ 来丢弃不感兴趣的值
+        split("Stevie Ray Vaughan", out string e, out _);
+        Console.WriteLine(e);
     }
 }
