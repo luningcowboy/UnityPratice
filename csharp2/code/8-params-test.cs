@@ -11,5 +11,7 @@ class Test{
     static void Main(){
         int total = Sum(1,2,3,4);
         Console.WriteLine(total);
+        int total2 = Sum(new int[]{1,2,3,4});
+        Console.WriteLine(total2);
     }
 }
