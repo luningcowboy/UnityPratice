@@ -7,7 +7,7 @@
 ```c#
 Console.log("这是日志");
 Console.log("a = {0}, b = {1}, c = {2}", a, b, c);
-Console.log("a = {0}, b = {0}, c = {0}", a, b, c);
+Console.log("a = {0}, b = {0}, c = {0}", a, b, c);// 这种情况也是正确输出a,b,c
 Console.log("A = {}, b = {}, c = {},", a, b, c); // Error
 ```
 7. 声明一个类`class <class-name>`
