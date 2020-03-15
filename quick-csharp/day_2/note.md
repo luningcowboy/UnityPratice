@@ -22,11 +22,11 @@
 一个变量就是一个供程序操作的存储区域的名字。
 每个变量都有一个类型名， **决定了变量的内存大小和布局**
 ### 值类型
-整数类型: sbyte, byte, short, ushort, int, uint, long, ulong, char
-浮点数: float, double
-十进制: decimal
-布尔值: true, false
-空类型: 可谓空值的数据类型
+- 整数类型: sbyte, byte, short, ushort, int, uint, long, ulong, char
+- 浮点数: float, double
+- 十进制: decimal
+- 布尔值: true, false
+- 空类型: 可为空值的数据类型
 ### 变量的定义
 `<data_type> <variable_list>;`
 ```c#
