@@ -143,6 +143,12 @@ namespace Test{
                     Console.WriteLine("{0} 是质数", i);
             }
         }
+        public static void Test11(){
+            double i = 3.1415;
+            //int j = i as int; // ERROR 值类型不能用as转换，只有Object可以
+            int j = (int)i;
+            Console.WriteLine("{0},{1}", i, j);
+        }
     }
     class Application{
         static void Main(string[] args){
@@ -156,6 +162,7 @@ namespace Test{
             TestGXOperate.Test8();
             TestGXOperate.Test9();
             TestGXOperate.Test10();
+            TestGXOperate.Test11();
         }
     }
 }
