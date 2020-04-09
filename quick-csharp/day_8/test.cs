@@ -38,6 +38,11 @@ namespace TestArray{
             Console.WriteLine("Message: {0}", chat);
         }
         static void TestStringCompare(){
+            /*
+            1 ： str1大于str2
+            0 ： str1等于str2
+            -1 ： str1小于str2
+            */
             int ret = String.Compare("abc","abc");
             Console.WriteLine("TestStringCompare:abc,abc = {0}", ret); // 0
             ret = String.Compare("abc","bbc");
