@@ -1,0 +1,14 @@
+﻿<Properties StartupConfiguration="{B23F85A7-EAE6-8E56-08EA-0E7A58E5E3EA}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/scene_main.cs">
+    <Files>
+      <File FileName="Assets/scripts/scene_main.cs" Line="17" Column="2" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="b8f4521d-76e3-466c-ac03-89bbe611856e" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
