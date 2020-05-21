@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-//using System.Data.Entity;
+using System.Data.Entity;
 using System.Dynamic;
 using System.Linq;
 using System.Linq.Expressions;
@@ -51,6 +51,10 @@ namespace Learning
 
             DateTime fooDate = DateTime.Now;
             Console.WriteLine(fooDate.ToString("hh:mm, dd MMM yyyy"));
+
+            string bazString = @"Here's some stuff
+                on a new ling: ""Wow"" , the messes cried";
+            Console.WriteLine(bazString);
 
         }
 
