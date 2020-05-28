@@ -39,7 +39,23 @@ class Program{
         int a = 1, b = 2;
         Console.WriteLine("a = {0}, b = {1}",a, b);
     }
+    static void Variable1(){
+        int num1 = 100;
+        double num2 = 100.123;
+        bool isFlag = true;
+        string name = "Hello";
+
+        Console.WriteLine("num1=" + num1);
+        Console.WriteLine("num2=" + num2);
+        Console.WriteLine("isFlag=" + isFlag);
+        Console.WriteLine("name=" + name);
+    }
+    static void Variable2(){
+        int a = 10;
+        int b = 20;
+    }
     static void Main(){
         Variable();
+        Variable1();
     }
 }
