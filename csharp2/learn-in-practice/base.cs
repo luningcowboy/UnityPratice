@@ -35,10 +35,11 @@ class Program{
         bool a = true;
         Console.WriteLine(a ? "a = true" : "a = false");
     }
+    static void Variable(){
+        int a = 1, b = 2;
+        Console.WriteLine("a = {0}, b = {1}",a, b);
+    }
     static void Main(){
-        Operate();
-        Operate2();
-        Operate3();
-        Operate4();
+        Variable();
     }
 }
