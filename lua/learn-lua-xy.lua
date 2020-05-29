@@ -24,4 +24,6 @@ elseif s ~= 'water' then
 else
     thisIsGlobal = 5
     local line = io.read()
-    print()
+
+    print('windter is comming' .. line)
+end
