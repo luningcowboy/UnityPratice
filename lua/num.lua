@@ -93,3 +93,16 @@ print(round2(3.5)) --> 4
 -- 数值类型转换
 -- integer ==> float
 print(3 + 0.0) --> 3.0
+
+print(math.tointeger(3.0)) --> 3
+print(math.tointeger(-3.15)) --> nil
+print(math.tointeger(-3.0)) --> -3
+print(math.tointeger(3.15)) --> nil
+print(math.tointeger(1.5)) --> nil
+
+function cond2int(x)
+    return math.tointeger(x) or x
+end
+
+print(cond2int(3.15)) --> 3.15
+print(cond2int(-3.15)) --> -3.15
