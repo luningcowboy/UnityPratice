@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+namespace XLuaTest
+{
 public class TestXLuaHello : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -17,4 +19,6 @@ public class TestXLuaHello : MonoBehaviour
     {
         
     }
+}
+    
 }
