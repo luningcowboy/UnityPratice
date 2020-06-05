@@ -24,3 +24,13 @@ print("mytable 1", mytable[1])
 
 mytable = nil
 print("mytable = ", mytable)
+
+-- table 操作
+-- 连接
+fruits = {"banana", "orange", "apple"}
+print("concat=>", table.concat(fruits))
+print("concat=>", table.concat(fruits, ", "))
+print("concat=>", table.concat(fruits, ", ", 2, 3))
+-- 插入和移除
+table.insert(fruits, "mango")
+print(fruits[4])
