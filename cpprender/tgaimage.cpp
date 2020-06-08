@@ -176,4 +176,24 @@ bool TGAImage::write_tga_file(const char *filename, bool rle){
         return false;
     }
     return true;
+
+    if(!rle){
+        out.write((char *)data, width * height * bytespp);
+        if(!out.good()){
+            std::cerr<<"can't unload raw data\n";
+            out.close();
+            return false;
+        }
+    }
+    else{
+        if(!unload_rle_data(out)){
+            out.close();
+            std::cerr<<"cant't dump the tga file\n";
+            return false;
+        }
+    }
+    out.write((char *)devloper_area_ref, sizeof(devloper_area_ref));
+    if(!out.good()){
+    }
+
 }
