@@ -194,6 +194,79 @@ bool TGAImage::write_tga_file(const char *filename, bool rle){
     }
     out.write((char *)devloper_area_ref, sizeof(devloper_area_ref));
     if(!out.good()){
+        std::cerr<<"can not dump the tag file\n";
+        out.close();
+        return false;
     }
+    out.write((char *)extension_area_ref, sizeof(extension_area_ref));
+    if(!out.good()){
+        std::cerr<<"cant not dump the tga file\n";
+        out.close();
+        return false;
+    }
+    out.write((char *) footer, sizeof(footer));
+    if(!out.good()){
+        std::cerr<<"can not dump the tga file\n";
+        out.close();
+        return false;
+    }
+    out.close();
+    return true;
+}
 
+bool TGAImage::unload_rle_data(std::ofstream &out){
+    const unsigned char max_chunk_length = 128;
+    unsigned long npixels = width * height;
+    unsigned long curpix = 0;
+    while(curpix < npixels){
+        unsigned long chunkstart = curpix * bytespp;
+        unsigned long curbyte = width * height;
+        unsigned char run_length = 1;
+        bool raw = true;
+        while(curpix + run_length < npixels && run_length < max_chunk_length){
+            bool succ_eq = true;
+            for(int t = 0; succ_eq && t < bytespp; t++){
+                succ_eq = (data[curbyte + t] == data[curbyte + t + bytespp]);
+            }
+            curbyte += bytespp;
+            if(1==run_length){
+                raw = !succ_eq;
+            }
+            if(raw && succ_eq){
+                run_length --;
+                break;
+            }
+            if(!raw && !succ_eq){
+                break;
+            }
+            run_length++;
+        }
+        curpix += run_length;
+        out.put(raw?run_length - 1:run_length + 127);
+        if(!out.good()){
+            std::cerr<<"cant not dump the tag file\n";
+            return false;
+        }
+        out.write((char *)(data + chunkstart), (raw ? run_length * bytespp:bytespp));
+        if(!out.good()){
+            std::cerr<<"can not dump the tga file \n";
+            return false;
+        }
+    }
+    return true;
+}
+
+TGAColor TGAImage::get(int x, int y){
+    if(!data || x < 0 || y < 0 || x >= width || y >= height){
+        return TGAColor();
+    }
+    return TGAColor(data + (x + y * width) * bytespp, bytespp);
+}
+
+bool TGAImage::set(int x, int y, TGAColor &c){
+    if(!data || x < 0 || y < 0 || x >= width || y >= height){
+        return false;
+    }
+    memcpy(data + (x + y * width) * bytespp, c.bgra, bytespp);
+    return true;
 }
