@@ -34,10 +34,13 @@ class Program{
         var world = "world";
         Console.WriteLine("world = " + world);
     }
+    static void Test2(){
+        const double PI = 3.14;
+        int r = 3;
+        Console.WriteLine("周长:" + 2 * PI * r);
+        Console.WriteLine("面积:" + PI * r * r);
+    }
     static void Main(string[] args){
-        int a = 100;
-        int b = 200;
-        Switch1(out a, out b);
-        Console.WriteLine($"a = {a},b = {b}");
+        Test2();
     }
 }
