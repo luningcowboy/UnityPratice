@@ -25,5 +25,30 @@ namespace MVC.Patterns.Facade
         {
             return InstanceMap.GetOrAdd(key, new Lazy<IFacade>(factory(key))).Value;
         }
+
+        public static void InitializeController()
+        {
+            controller = Controller.GetInstance(multitonKey, key => new Controller(key));
+        }
+
+        public virtual void InitializeModel()
+        {
+            model = Model.GetInstance(multitonKey, key => new Model(key));
+        }
+
+        public virtual void InitializeView()
+        {
+            view = View.GetInstance(multitonKey, key => new View(key));
+        }
+
+        public virtual void RegisterCommand(string notificationName, Func<ICommand> commandFunc)
+        {
+            controller.RegisterCommand(notificationName, commandFunc);
+        }
+
+        public virtual void RemoveCommand(string notificationName)
+        {
+            controller.RemoveCommand(notificationName);
+        }
     }
 }
