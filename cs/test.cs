@@ -32,21 +32,17 @@ class LiteInstance
         return instance;
     }
 }
-class D<T>{
-    private static T _instance = default(T);
-    public static T Instance<T>() where T : new()
-    {
-        var type = typeof(T);
-        return new T();
+class E{
+    public static string xxxx = "xxxx";
+    static E(){
+        Console.WriteLine("initEEEEE");
     }
-}
-class D1: D<D1>{
-}
-class D2: D<D2>{
 }
 class C{
     static void Main(string[] args)
     {
+        Console.WriteLine($"Main=>{E.xxxx}");
+        /*
         var a = typeof(A);
         var a1 = a.ToString();
         Console.WriteLine(a.ToString());
@@ -64,5 +60,6 @@ class C{
         Console.WriteLine(typeof(d));
         Console.WriteLine(typeof(d1));
         Console.WriteLine(typeof(d2));
+        */
     }
 }
