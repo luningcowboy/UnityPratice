@@ -50,5 +50,35 @@ namespace MVC.Patterns.Facade
         {
             controller.RemoveCommand(notificationName);
         }
+
+        public virtual bool HasCommand(string notificationName)
+        {
+            return controller.HasCommand(notificationName);
+        }
+
+        public virtual void RegisterProxy(IProxy proxy)
+        {
+            model.RegisterProxy(proxy);
+        }
+
+        public virtual IProxy RetrieveProxy(string proxyName)
+        {
+            return model.RetrieveProxy(proxyName);
+        }
+
+        public virtual IProxy RemoveProxy(string proxyName)
+        {
+            return model.RemoveProxy(proxyName);
+        }
+
+        public virtual bool HasProxy(string proxyName)
+        {
+            return model.HasProxy(proxyName);
+        }
+
+        public virtual void RegisterMediator(IMediator mediator)
+        {
+            view.RegisterMediator(mediator);
+        }
     }
 }
