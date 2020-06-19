@@ -80,5 +80,53 @@ namespace MVC.Patterns.Facade
         {
             view.RegisterMediator(mediator);
         }
+
+        public virtual IMediator RetrieveMediator(string mediatorName)
+        {
+            return view.RetrieveMediator(mediatorName);
+        }
+
+        public virtual IMediator RemoveMediator(string mediatorName)
+        {
+            return view.RemoveMediator(mediatorName);
+        }
+
+        public virtual bool HasMediator(string mediatorName)
+        {
+            return view.HasMediator(mediatorName);
+        }
+
+        public virtual void SendNotification(string notificationName, object body = null, string type = null)
+        {
+            NotifyObservers(new Notification(notificationName, body, type));
+        }
+
+        public virtual void NotifyObservers(INotification notification){
+            view.NotifyObservers(notification);
+        }
+
+        public virtual void InitializeNotifier(string key)
+        {
+            multitonKey = key;
+        }
+
+        public static void HasCore(string key)
+        {
+            return InstanceMap.TryGetValue(key, out _);
+        }
+
+        public static void RemoveCore(string key){
+            if(InstanceMap.TryGetValue(key, out _) == false) return;
+            Model.RemoveModle(key);
+            View.RemoveView(key);
+            Controller.RemoveController(key);
+            InstanceMap.TryRemove(key, out _);
+        }
+
+        protected IController controller;
+        protected IModel model;
+        protected IView view;
+        protected string multitonKey;
+        protected static readonly ConcurrentDictionary<string, Lazy<IFacade>> InstanceMap = new ConcurrentDictionary<string, Lazy<IFacade>>();
     }
 }
