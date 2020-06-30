@@ -1,0 +1,119 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Icon
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 366870d708194410a9ce6c3ca0d33876, type: 3}
+    totalSpriteSurfaceArea: 151866
+    bindAsDefault: 1
+    storedHash:
+      serializedVersion: 2
+      Hash: 00000000000000000000000000000000
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 95e5d501a8ecf47a787fda41ed8e26ab, type: 3}
+  - {fileID: 21300000, guid: 86dbaa51666a6d549a2fba6c77689bab, type: 3}
+  - {fileID: 21300000, guid: 23fabdc1cfc3ba1428223a5b09a5bbcb, type: 3}
+  - {fileID: 21300000, guid: b30199023ef5b4c339ce778f7cffc01d, type: 3}
+  - {fileID: 21300000, guid: a5185932e0a5c4dfc8c60069d84a7e1d, type: 3}
+  - {fileID: 21300000, guid: bb6201526e66efd458274fefad4acff3, type: 3}
+  - {fileID: 21300000, guid: 2c6bdd620996c4a5992e62e99a768ecb, type: 3}
+  - {fileID: 21300000, guid: 0dcf767242d6d4183b677e5f5ae59fa4, type: 3}
+  - {fileID: 21300000, guid: 66ac56c26ee89b347ae91fee25f53648, type: 3}
+  - {fileID: 21300000, guid: 856a97234c1fa4818afd25a4b368fe3a, type: 3}
+  - {fileID: 21300000, guid: f792594369ad745659902ea52a663c27, type: 3}
+  - {fileID: 21300000, guid: b7da6d14890c0004a8e3b6de64a55ef2, type: 3}
+  - {fileID: 21300000, guid: 7551357408b564a609c5e6223144ba2d, type: 3}
+  - {fileID: 21300000, guid: 5f85ffc46dd3b438c9ccf25ca7d42f3e, type: 3}
+  - {fileID: 21300000, guid: 8d83ad853861242b69388182d784eb6b, type: 3}
+  - {fileID: 21300000, guid: fde52a46cb3073e41a38a8a7d488302a, type: 3}
+  - {fileID: 21300000, guid: a8a5cf86891e84742bf21ba9f1a4b23b, type: 3}
+  - {fileID: 21300000, guid: 6e6c7496656defe4c9dd8db28ac74dfe, type: 3}
+  - {fileID: 21300000, guid: 3b2f59d6fc651d740abdbfbf56a3080d, type: 3}
+  - {fileID: 21300000, guid: a8a35507a0c16964192b35655557a0a8, type: 3}
+  - {fileID: 21300000, guid: d6a85f17b1c854c5d8fa921a4c1561a5, type: 3}
+  - {fileID: 21300000, guid: 36a067c775b5640c6a7fb692a4558675, type: 3}
+  - {fileID: 21300000, guid: ea1f4d38e994940cdb53eab7bb1f6000, type: 3}
+  - {fileID: 21300000, guid: b06550f8b536448d9b0c0791798c4c8a, type: 3}
+  - {fileID: 21300000, guid: 056c23495367a8c49944ba8af088cc2f, type: 3}
+  - {fileID: 21300000, guid: 04db001a8660a4a7082c29c0941d6ad6, type: 3}
+  - {fileID: 21300000, guid: 05aa342aa27a2564ebc7e574ef1eeccb, type: 3}
+  - {fileID: 21300000, guid: 480a0b4a54010ac49b2c1371edcb79b8, type: 3}
+  - {fileID: 21300000, guid: 582028ca7ce3bdd42b85b79058e61bae, type: 3}
+  - {fileID: 21300000, guid: bea5bd6b786056e4eaeab267e4d7947d, type: 3}
+  - {fileID: 21300000, guid: 0f55f5eb4b6e37a4dba771e0c32cfa79, type: 3}
+  - {fileID: 21300000, guid: 5e49a64cda75a4adda14e2e88d076f18, type: 3}
+  - {fileID: 21300000, guid: 0882714d64ea84e11adb1239eaf7b8b4, type: 3}
+  - {fileID: 21300000, guid: 8144b5dd2917e4941b55cb4b21ecfc51, type: 3}
+  - {fileID: 21300000, guid: 7b394bdd108e74bdc97c5f63cf6f31f6, type: 3}
+  - {fileID: 21300000, guid: 0d5891de4f2c346cabfd8716f7088e55, type: 3}
+  - {fileID: 21300000, guid: eb80ef1ffe7607f40bac183f7494bb84, type: 3}
+  - {fileID: 21300000, guid: 96b38b6f50c7ddf48821d6751dc2a2f4, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Icon_Light
+  - Icon_Ranking_3
+  - Icon_Facebook_3
+  - Icon_Facebook_2
+  - Icon_Button_1
+  - Icon_Clock
+  - Icon_New
+  - Icon_Empty
+  - Icon_Button_5
+  - Icon_Checkmark
+  - Icon_tophand
+  - Icon_Diamond_1
+  - Icon_Button_3
+  - Icon_Video 1
+  - Icon_Hand
+  - Icon_Facebook_1
+  - Icon_Share_1
+  - Icon_Level
+  - Icon_Ranking_2
+  - Icon_Diamond
+  - Icon_Clock_2
+  - Icon_Book
+  - Icon_Chip
+  - Icon_Button_4
+  - Icon_Bell
+  - Icon_Button_2
+  - Icon_Ranking_1
+  - Icon_Admin
+  - Icon_Diamond_2
+  - Icon_Info
+  - Icon_Coin
+  - Icon_Video
+  - Icon_Player
+  - Icon_Coin_2
+  - Icon_GanLanYe
+  - Icon_Coin_1
+  - Icon_Chip_1
+  - Icon_Share
+  m_Tag: Icon
+  m_IsVariant: 0

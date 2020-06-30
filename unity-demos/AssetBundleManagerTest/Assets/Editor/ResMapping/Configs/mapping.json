@@ -1,0 +1,39 @@
+{
+  "list": [
+    {
+      "fullName": "Hall_Login_UILoginView_prefab",
+      "type": "prefab",
+      "bundleName": "hall/hall_1",
+      "editorPath": "Games/Hall/Bundles/Login/UILoginView.prefab",
+      "bundlePath": "UILoginView"
+    },
+    {
+      "fullName": "Hall_PluginEnter_UIPluginEnterView_prefab",
+      "type": "prefab",
+      "bundleName": "hall/hall_1",
+      "editorPath": "Games/Hall/Bundles/PluginEnter/UIPluginEnterView.prefab",
+      "bundlePath": "UIPluginEnterView"
+    },
+    {
+      "fullName": "Demo_DemoPluginLoading_DemoPluginLoadingView_prefab",
+      "type": "prefab",
+      "bundleName": "demo/demo_1",
+      "editorPath": "Games/Demo/Bundles/DemoPluginLoading/DemoPluginLoadingView.prefab",
+      "bundlePath": "DemoPluginLoadingView"
+    },
+    {
+      "fullName": "Demo_DemoRoot_UIDemoRootView_prefab",
+      "type": "prefab",
+      "bundleName": "demo/demo_1",
+      "editorPath": "Games/Demo/Bundles/DemoRoot/UIDemoRootView.prefab",
+      "bundlePath": "UIDemoRootView"
+    },
+    {
+      "fullName": "Texas_TexasPluginLoading_TexasPluginLoadingView_prefab",
+      "type": "prefab",
+      "bundleName": "texas/texas_1",
+      "editorPath": "Games/Texas/Bundles/TexasPluginLoading/TexasPluginLoadingView.prefab",
+      "bundlePath": "TexasPluginLoadingView"
+    }
+  ]
+}
