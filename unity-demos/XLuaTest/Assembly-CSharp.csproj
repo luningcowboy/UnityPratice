@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\01-helloworld\HelloWorld.cs" />
     <Compile Include="Assets\Scripts\02-u3dscripting\LuaBehaviour.cs" />
     <Compile Include="Assets\Scripts\03-UIEvent\UIEvent.cs" />
+    <Compile Include="Assets\Scripts\04-luaobjectrented\InvokeLua.cs" />
     <Compile Include="Assets\XLua\Examples\01_Helloworld\Helloworld.cs" />
     <Compile Include="Assets\XLua\Examples\02_U3DScripting\LuaBehaviour.cs" />
     <Compile Include="Assets\XLua\Examples\04_LuaObjectOrented\InvokeLua.cs" />
@@ -116,6 +117,7 @@
     <None Include="Assets\XLua\Examples\02_U3DScripting\LuaTestScript.lua.txt" />
     <None Include="Assets\XLua\Examples\07_AsyncTest\Resources\async_test.lua.txt" />
     <None Include="Assets\XLua\Tutorial\LoadLuaScript\ByFile\Resources\byfile.lua.txt" />
+    <None Include="Assets\Scripts\04-luaobjectrented\InvokeLua.lua.txt" />
     <None Include="Assets\XLua\Examples\06_Coroutine\Resources\coruntine_test.lua.txt" />
     <None Include="Assets\Scripts\02-u3dscripting\LuaTestScript.lua.txt" />
     <None Include="Assets\Scripts\03-UIEvent\ButtonInteraction.lua.txt" />
