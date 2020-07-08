@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/03-uievent.unity
+- path: Assets/XLua/Examples/04_LuaObjectOrented/InvokeLua.unity
   isLoaded: 1
   isActive: 1
