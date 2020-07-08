@@ -1,0 +1,51 @@
+print_message = 	nil
+print_message = 	function: 0x7f88dfc057b0
+Lua output : print_message function is exist!
+local_name = 	nil
+Lua output : this is local functon
+
+
+
+
+
+
+output _G:
+
+loadfile			function: 0x1065c5470
+tostring			function: 0x1065c5de0
+bit32			table: 0x7f88dfc04f10
+next			function: 0x1065c56c0
+rawset			function: 0x1065c59f0
+xpcall			function: 0x1065c5e60
+coroutine			table: 0x7f88dfc02f10
+rawlen			function: 0x1065c5940
+io			table: 0x7f88dfc033c0
+_VERSION			Lua 5.3
+print			function: 0x1065c57d0
+utf8			table: 0x7f88dfc048b0
+_G			table: 0x7f88dfd00d00
+debug			table: 0x7f88dfc02c90
+getmetatable			function: 0x1065c53f0
+local_name			function: 0x7f88dfc05bc0
+math			table: 0x7f88dfc043d0
+string			table: 0x7f88dfc04120
+error			function: 0x1065c5370
+print_message			function: 0x7f88dfc057b0
+type			function: 0x1065c5e10
+dofile			function: 0x1065c5300
+setmetatable			function: 0x1065c5af0
+rawget			function: 0x1065c59a0
+pairs			function: 0x1065c5720
+ipairs			function: 0x1065c5440
+tonumber			function: 0x1065c5b90
+arg			table: 0x7f88dfc052d0
+collectgarbage			function: 0x1065c5240
+os			table: 0x7f88dfc02e30
+table			table: 0x7f88dfc02810
+package			table: 0x7f88dfc023d0
+assert			function: 0x1065c51c0
+require			function: 0x7f88dfc02e90
+select			function: 0x1065c5a50
+load			function: 0x1065c5550
+rawequal			function: 0x1065c58f0
+pcall			function: 0x1065c5740
