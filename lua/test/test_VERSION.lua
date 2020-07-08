@@ -1,0 +1,1 @@
+print('LuaVersion:', _VERSION)
