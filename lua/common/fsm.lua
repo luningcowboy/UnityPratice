@@ -18,6 +18,8 @@ end
 --- @return
 function FSM:active()
     self._actived = true
+    self._currentStat.onEnter()
+    self._currentStat.exec()
 end
 
 --- 关闭FSM
