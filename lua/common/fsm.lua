@@ -70,7 +70,6 @@ end
 function FSM:_doCheck()
     local rules = self._conf.rules
     for _, rule in pairs(rules) do
-        print('doCheck:', rule.from, rule.to, self._currentStat.tag)
         if rule.from == self._currentStat.tag then
             if rule.rule() then
                 self:_switchStat(rule.to)
@@ -81,7 +80,6 @@ end
 
 -- 切换到指定状态
 function FSM:_switchStat(to)
-    print('switchStat:', to)
     local toStat = self._conf.stats[to]
     --assert(toStat == nil, 'Switch stat failed!!')
     self._currentStat.onExit()
@@ -97,7 +95,4 @@ function FSM:_prepareStat()
     self._paused = false
 end
 
-for k, v in pairs(FSM) do
-    print('xxxxx==>', k, v)
-end
 return FSM
