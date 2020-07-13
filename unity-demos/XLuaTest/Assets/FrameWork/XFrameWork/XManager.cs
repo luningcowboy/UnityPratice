@@ -1,4 +1,9 @@
-$HEADER$namespace $NAMESPACE$
+using UnityEngine;
+
+namespace FrameWork.XFrameWork
 {
-  public class $CLASS$ {$END$}
+    public class XManager : MonoBehaviour
+    {
+        
+    }
 }

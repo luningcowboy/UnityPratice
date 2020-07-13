@@ -63,6 +63,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\FrameWork\XFrameWork\XLauncher.cs" />
+    <Compile Include="Assets\FrameWork\XFrameWork\XManager.cs" />
     <Compile Include="Assets\Scripts\01-helloworld\HelloWorld.cs" />
     <Compile Include="Assets\Scripts\02-u3dscripting\LuaBehaviour.cs" />
     <Compile Include="Assets\Scripts\03-UIEvent\UIEvent.cs" />
