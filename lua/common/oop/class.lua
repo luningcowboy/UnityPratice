@@ -8,7 +8,6 @@ local _metatable = {}
 setmetatable(Class, _metatable)
 
 _metatable.__call = function(t, className, super)
-    print('__call 11111111111')
     assert(type(className) == 'string' and #className > 0)
     assert(_names[className] == nil, "Class [" .. className .. "] already exist")
 
@@ -24,7 +23,6 @@ _metatable.__call = function(t, className, super)
     tableNewClass.__index = super
 
     tableNewClass.__call = function(t, ...)
-    print('__call 22222222222')
         local tableNewObject = {
             type = tableNewClass,
             category = "Instance"
