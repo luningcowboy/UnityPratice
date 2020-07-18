@@ -13,7 +13,7 @@ namespace Frameworks.XManager
         public const string OnApplicationPausePath = Main + ".OnApplicationPause";
         public const string OnApplicationResumePath = Main + ".OnApplicationResume";
 
-        public const string Updater = "Frameworks.Updater";
+        public const string Updater = "Frameworks.Unity.Updater";
         public const string Update = Updater + ".Update";
         public const string LateUpdate = Updater + ".LateUpdate";
         public const string FixedUpdate = Updater + ".FixedUpdate";

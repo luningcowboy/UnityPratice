@@ -6,10 +6,10 @@
 ---
 
 local Updater = {}
-function Updater.Update() 
+function Updater.Update(deltaTime, unscaleDeltaTime) 
     Frameworks.Log.D("Update")
 end
-function Updater.FixedUpdate()
+function Updater.FixedUpdate(fixedDeltaTime)
     Frameworks.Log.D("FixedUpdate")
 end
 function Updater.LateUpdate()

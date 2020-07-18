@@ -144,13 +144,11 @@ namespace Frameworks.XManager
 
         private void Update()
         {
-            if (_env != null)
-            {
-                _env.Tick();
-                if (Time.frameCount % 100 == 0) _env.FullGc();
-                NormalUpdate();
-                SlowUpdate();
-            }
+            if (_env == null) return;
+            _env.Tick();
+            if (Time.frameCount % 100 == 0) _env.FullGc();
+            NormalUpdate();
+            SlowUpdate();
         }
 
         private void LateUpdate()
