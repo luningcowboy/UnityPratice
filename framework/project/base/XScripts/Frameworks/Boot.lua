@@ -7,4 +7,5 @@ JSON = require "Frameworks.Base.Libs.Json"
 Frameworks = {}
 Frameworks.FSM = require "Frameworks.FSM"
 Frameworks.NotificationCenter = require "Frameworks.NotificationCenter"
+Frameworks.MVC = require "Frameworks.Base.MVC.Boot"
 
