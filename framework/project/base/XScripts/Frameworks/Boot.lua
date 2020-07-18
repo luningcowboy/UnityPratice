@@ -4,13 +4,14 @@ local require = require
 Class = require "Frameworks.Base.OOP.MetatableClass"
 ConstClass = require "Frameworks.Base.OOP.ConstClass"
 JSON = require "Frameworks.Base.Libs.Json"
+require "Frameworks.Base.OOP.Import"
 
 --- Frameworks模块
 Frameworks = {}
 Frameworks.Log = require "Frameworks.Log"
 Frameworks.FSM = require "Frameworks.FSM"
 Frameworks.NotificationCenter = require "Frameworks.NotificationCenter"
-Frameworks.MVC = require "Frameworks.MVC.Boot"
+require "Frameworks.MVC.Boot"
 
 -- 导入Unity相关组件
 Frameworks.Unity = require "Frameworks.Unity.Boot"
