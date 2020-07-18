@@ -12,17 +12,18 @@ setmetatable(
     }
 )
 
+local Tag = "Main"
 local function Entry() 
-    Frameworks.Log.D("Main", "Entry")
+    Frameworks.Log.D(Tag, "Entry")
 end
 local function OnApplicationQuit()
-    Frameworks.Log.D("Main", "OnApplicationQuit")
+    Frameworks.Log.D(Tag, "OnApplicationQuit")
 end
 local function OnApplicationPause()
-    Frameworks.Log.D("Main", "OnApplicationPause")
+    Frameworks.Log.D(Tag, "OnApplicationPause")
 end
 local function OnApplicationResume()
-    Frameworks.Log.D("Main", "OnApplicationResume")
+    Frameworks.Log.D(Tag, "OnApplicationResume")
 end
 
 Main.Entry = Entry

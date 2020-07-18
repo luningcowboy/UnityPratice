@@ -11,30 +11,28 @@ local function GetTimeStamp()
     return os.date("%Y/%m/%d %H-%M-%S", os.time())
 end
 
-local function FormatLogs(...) 
-    --[[
-    local arr = ...
-    if not arr or #arr <= 0 then return "" end
+local function FormatLogs(...)
+    local arr = { ... }
+    if not arr or #arr <= 0 then
+        return ""
+    end
     local info = ""
-    for v in arr do
-        print(type(v))
+    for _,v in ipairs(arr) do
         info = info .. " " .. v
     end
     return info
-    ]]
-    return ""
 end
 
-function Log.D(tag, ...) 
-    local info = "[DEBUG] ["..GetTimeStamp() .."] ".. " [" .. tag .. "] " .. FormatLogs(...)
+function Log.D(tag, ...)
+    local info = "[DEBUG] [" .. GetTimeStamp() .. "] " .. " [" .. tag .. "] " .. FormatLogs(...)
     print(info)
 end
 function Log.E(tag, ...)
-    local info = "[ERROR] ["..GetTimeStamp() .."] ".. " [" .. tag .. "] " .. FormatLogs(...)
+    local info = "[ERROR] [" .. GetTimeStamp() .. "] " .. " [" .. tag .. "] " .. FormatLogs(...)
     print(info)
 end
 function Log.W(tag, ...)
-    local info = "[WARNING] ["..GetTimeStamp() .."] ".. " [" .. tag .. "] " .. FormatLogs(...)
+    local info = "[WARNING] [" .. GetTimeStamp() .. "] " .. " [" .. tag .. "] " .. FormatLogs(...)
     print(info)
 end
 

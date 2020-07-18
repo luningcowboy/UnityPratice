@@ -6,19 +6,20 @@
 ---
 
 local Updater = {}
+local Tag = "Updater"
 function Updater.Update(deltaTime, unscaleDeltaTime) 
-    Frameworks.Log.D("Update")
+    Frameworks.Log.D(Tag, "Update")
 end
 function Updater.FixedUpdate(fixedDeltaTime)
-    Frameworks.Log.D("FixedUpdate")
+    Frameworks.Log.D(Tag, "FixedUpdate")
 end
 function Updater.LateUpdate()
-    Frameworks.Log.D("LateUpdate")
+    Frameworks.Log.D(Tag, "LateUpdate")
 end
 function Updater.SlowUpdate()
-    Frameworks.Log.D("SlowUpdate")
+    Frameworks.Log.D(Tag, "SlowUpdate")
 end
 function Updater.CoroutineUpdate()
-    Frameworks.Log.D("CoroutineUpdate")
+    Frameworks.Log.D(Tag, "CoroutineUpdate")
 end
 return Updater
