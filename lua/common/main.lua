@@ -10,4 +10,6 @@ local function Test1()
     test:dtor()
 end
 
-Test1()
+local function Test2()
+end
+
