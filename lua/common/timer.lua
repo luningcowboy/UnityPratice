@@ -8,21 +8,52 @@
 --@class TimerEvent
 local TimerEvent = Class("TimerEvent")
 
+-------------------私有方法-------------------
+---执行事件
+---@param info timer信息
+local function Trigger(self, info)
+    if info ~= nil then
+        info.callback(info.scope)
+        info.curTimes = info.curTimes + 1
+    end
+    if info.repeatTimes ~= -1 and info.curTimes >= info.repeatTimes then
+        self:Remove(info.scope, info.callback)
+    end
+end
+
+-------------------公有方法-------------------
 --构造函数
 function TimerEvent:Ctor()
     self._timerEvent = {}
     -- 添加Update监听事件
 end
 
+---获取所有的Timer
+function TimerEvent:GetTimerEvents()
+    return self._timerEvent
+end
+
+function TimerEvent:IsAdd(info2Add)
+    local ret = true
+    for _, info in ipairs(self._timerEvent) do
+        if info.scope == info2Add.scope and info.callback == info2Add.callback then
+            ret = false
+            break
+        end
+    end
+    return ret
+end
+
 --- 添加新Timer
----@param scope
----@param callback
----@param dt
----@param repeatTimes
----@param triggerAtOnce
+---@param scope 作用域
+---@param callback 回调
+---@param dt 每次调用的时间间隔
+---@param repeatTimes -1 或者 >= 1的数
+---@param triggerAtOnce 会在Add的时候执行一次
 function TimerEvent:Add(scope, callback, dt, repeatTimes, triggerAtOnce)
     repeatTimes = repeatTimes or -1
     triggerAtOnce = triggerAtOnce or false
+
     local timerInfo = {
         scope = scope,
         callback = callback,
@@ -31,9 +62,16 @@ function TimerEvent:Add(scope, callback, dt, repeatTimes, triggerAtOnce)
         curTimes = 0,
         curDt = 0
     }
+
+    -- Check
+    if not self:IsAdd(timerInfo) then
+        return
+    end
+
+    -- Add
     self._timerEvent[#self._timerEvent + 1] = timerInfo
     if triggerAtOnce then
-        self:Trigger(self._timerEvent[#self._timerEvent])
+        Trigger(self, self._timerEvent[#self._timerEvent])
     end
 end
 
@@ -43,7 +81,7 @@ function TimerEvent:Update(dt)
     for _, info in ipairs(self._timerEvent) do
         info.curDt = info.curDt + dt
         if info.curDt >= info.dt then
-            self:Trigger(info)
+            Trigger(self, info)
         end
     end
 end
@@ -75,18 +113,6 @@ function TimerEvent:Remove(scope, callback)
             break
         end
         idx = idx - 1
-    end
-end
-
----执行事件
----@param info timer信息
-function TimerEvent:Trigger(info)
-    if info ~= nil then
-        info.callback(info.scope)
-        info.curTimes = info.curTimes + 1
-    end
-    if info.repeatTimes ~= -1 and info.curTimes >= info.repeatTimes then
-        self:Remove(info.scope, info.callback)
     end
 end
 
