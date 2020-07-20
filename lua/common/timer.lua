@@ -8,6 +8,7 @@
 --@class TimerEvent
 local TimerEvent = Class("TimerEvent")
 
+--构造函数
 function TimerEvent:Ctor()
     self._timerEvent = {}
     -- 添加Update监听事件
@@ -15,10 +16,13 @@ end
 
 --- 添加新Timer
 ---@param scope
----@param handler
+---@param callback
+---@param dt
+---@param repeatTimes
+---@param triggerAtOnce
 function TimerEvent:Add(scope, callback, dt, repeatTimes, triggerAtOnce)
-    triggerAtOnce = triggerAtOnce or false
     repeatTimes = repeatTimes or -1
+    triggerAtOnce = triggerAtOnce or false
     local timerInfo = {
         scope = scope,
         callback = callback,
@@ -47,7 +51,6 @@ end
 ---根据作用域移除Timer
 ---@param scope
 function TimerEvent:RemoveByScope(scope)
-    print("TimerEvent:RemoveByScope", #self._timerEvent)
     local len = #self._timerEvent
     local idx = len
     while idx >= 1 do
@@ -57,26 +60,22 @@ function TimerEvent:RemoveByScope(scope)
         end
         idx = idx - 1
     end
-    print("TimerEvent:RemoveByScope", #self._timerEvent)
 end
 
 ---根据Handler和Scope移除Timer
 ---@param handler
 ---@param scope
 function TimerEvent:Remove(scope, callback)
-    print("TimerEvent:Remove", #self._timerEvent)
     local len = #self._timerEvent
     local idx = len
     while idx >= 1 do
         local info = self._timerEvent[idx]
-        print("TimerEvent:Remove", idx, info, info.callback == callback, info.scope == scope)
         if info ~= nil and info.scope == scope and info.callback == callback then
             table.remove(self._timerEvent, idx)
             break
         end
         idx = idx - 1
     end
-    print("TimerEvent:Remove", #self._timerEvent)
 end
 
 ---执行事件
