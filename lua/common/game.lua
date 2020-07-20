@@ -3,6 +3,9 @@ require 'modules'
 local FPS = 60
 local FrameTime = 17 / 1000
 
+local testTimer = TestTimer()
+local index = 0
+
 local function sleep(n)
     local t1 = os.clock()
     local t2 = os.clock()
@@ -12,13 +15,11 @@ local function sleep(n)
 end
 
 local function update(dt)
-    print("update", dt)
+    Timer:Update(dt)
 end
 local function render()
-    print("render")
 end
 local function eventDispatch()
-    print("eventDispatch")
 end
 
 local function loop()
@@ -31,10 +32,16 @@ local function loop()
         eventDispatch()
         dt = os.time() - time
         if dt < 17 then
-            print("sleep", 0.017)
             sleep((17 - dt) / 1000)
             dt = 17
         end
+
+        index = index + 1
+        if index == 100 then
+            testTimer:Dtor()
+            testTimer = nil
+        end
+
     end
 end
 

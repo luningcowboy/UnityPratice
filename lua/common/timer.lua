@@ -6,7 +6,7 @@
 ---
 
 --@class TimerEvent
-local TimerEvent = Class("TimerEvent", {})
+local TimerEvent = Class("TimerEvent")
 
 function TimerEvent:Ctor()
     self._timerEvent = {}
@@ -47,31 +47,36 @@ end
 ---根据作用域移除Timer
 ---@param scope
 function TimerEvent:RemoveByScope(scope)
+    print("TimerEvent:RemoveByScope", #self._timerEvent)
     local len = #self._timerEvent
-    local idx = len + 1
+    local idx = len
     while idx >= 1 do
         local info = self._timerEvent[idx]
         if info.scope == scope then
-            table.remove(info)
+            table.remove(self._timerEvent, idx)
         end
         idx = idx - 1
     end
+    print("TimerEvent:RemoveByScope", #self._timerEvent)
 end
 
 ---根据Handler和Scope移除Timer
 ---@param handler
 ---@param scope
-function TimerEvent:Remove(handler, scope)
+function TimerEvent:Remove(scope, callback)
+    print("TimerEvent:Remove", #self._timerEvent)
     local len = #self._timerEvent
-    local idx = len + 1
+    local idx = len
     while idx >= 1 do
         local info = self._timerEvent[idx]
-        if info.scope == scope and info.handler == handler then
-            table.remove(info)
+        print("TimerEvent:Remove", idx, info, info.callback == callback, info.scope == scope)
+        if info ~= nil and info.scope == scope and info.callback == callback then
+            table.remove(self._timerEvent, idx)
             break
         end
         idx = idx - 1
     end
+    print("TimerEvent:Remove", #self._timerEvent)
 end
 
 ---执行事件
@@ -82,7 +87,7 @@ function TimerEvent:Trigger(info)
         info.curTimes = info.curTimes + 1
     end
     if info.repeatTimes ~= -1 and info.curTimes >= info.repeatTimes then
-        table.remove(info)
+        self:Remove(info.scope, info.callback)
     end
 end
 
