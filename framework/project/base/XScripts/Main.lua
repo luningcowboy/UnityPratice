@@ -1,8 +1,8 @@
 require "Frameworks.Boot"
 require "Games.Boot"
-Frameworks.Log.D("Main", "Enter Main")
 Main = {}
 
+-- 限制全局变量定义
 setmetatable(
     _G,
     {
