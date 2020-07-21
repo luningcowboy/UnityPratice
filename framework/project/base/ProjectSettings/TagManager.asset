@@ -14,8 +14,8 @@ TagManager:
   - 
   - 
   - PostProcessing
-  - 
-  - 
+  - Ignore Lights
+  - Ignore Cameras
   - 
   - 
   - 
