@@ -52,13 +52,10 @@ public static class XGenerateConfig
     [LuaCallCSharp] public static List<Type> LuaCallCSharp = new List<Type>()
     {
         //Custom
-        //typeof(XFramework.XUnityEngineTransformExtension),
-        //typeof(XFramework.XUnityEngineObjectExtension),
-        //typeof(XFramework.XUnityEngineUIButtonExtension),
         //System
-        typeof(System.Action<string>),
-        typeof(System.Collections.Generic.List<int>),
-        typeof(System.Object),
+        typeof(Action<string>),
+        typeof(List<int>),
+        typeof(Object),
         //UnityEngine
         typeof(UnityEngine.Object),
         typeof(UnityEngine.AnimationClip),
@@ -109,22 +106,22 @@ public static class XGenerateConfig
     [CSharpCallLua] public static List<Type> CSharpCallLua = new List<Type>()
     {
         //System
-        typeof(System.Action),
-        typeof(System.Action<bool>),
-        typeof(System.Action<double>),
-        typeof(System.Action<float>),
-        typeof(System.Action<float, float>),
-        typeof(System.Action<float, float, float>),
-        typeof(System.Action<string>),
-        typeof(System.Action<UnityEngine.Collider>),
-        typeof(System.Action<UnityEngine.Collision>),
-        typeof(System.Action<UnityEngine.Collider2D>),
-        typeof(System.Action<UnityEngine.Collision2D>),
+        typeof(Action),
+        typeof(Action<bool>),
+        typeof(Action<double>),
+        typeof(Action<float>),
+        typeof(Action<float, float>),
+        typeof(Action<float, float, float>),
+        typeof(Action<string>),
+        typeof(Action<UnityEngine.Collider>),
+        typeof(Action<UnityEngine.Collision>),
+        typeof(Action<UnityEngine.Collider2D>),
+        typeof(Action<UnityEngine.Collision2D>),
 
         //typeof(System.Action<SuperScrollView.LoopListViewItem2, object>),
 
-        typeof(System.Func<float>),
-        typeof(System.Func<double, double, double>),
+        typeof(Func<float>),
+        typeof(Func<double, double, double>),
         //typeof(System.Func<SuperScrollView.LoopListView2, int, SuperScrollView.LoopListViewItem2>),
         typeof(System.Collections.IEnumerator),
 
