@@ -12,9 +12,8 @@ local function Chunk(arr, size)
         if endIdx > maxArr then
             endIdx = maxArr
         end
+        
         idx = idx + 1
-    end
-    for _, v in pairs(arr) do
     end
     return ret
 end

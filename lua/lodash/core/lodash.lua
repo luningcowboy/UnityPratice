@@ -1,4 +1,4 @@
-print('load lodash')
-local lodash = {}
-lodash.array = require 'core.array.array'
-return lodash
+print('load lodash start')
+lodash = {}
+lodash.split = require 'core.split'
+print('load lodash end')

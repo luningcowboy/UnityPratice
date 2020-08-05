@@ -1,2 +1,0 @@
-local array = {}
-return array
