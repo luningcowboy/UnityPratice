@@ -12,7 +12,7 @@ local function Chunk(arr, size)
         if endIdx > maxArr then
             endIdx = maxArr
         end
-        
+        ret[#ret + 1] = lodash.split(arr, startIdx, endIdx)
         idx = idx + 1
     end
     return ret
