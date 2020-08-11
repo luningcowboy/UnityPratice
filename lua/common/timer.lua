@@ -33,6 +33,7 @@ function TimerEvent:GetTimerEvents()
     return self._timerEvent
 end
 
+-- 检测是否能够添加
 function TimerEvent:IsAdd(info2Add)
     local ret = true
     for _, info in ipairs(self._timerEvent) do
