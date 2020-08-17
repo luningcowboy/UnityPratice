@@ -17,3 +17,7 @@ local function test()
 
 end
 test()
+
+local function test1(...)
+    print()
+end
