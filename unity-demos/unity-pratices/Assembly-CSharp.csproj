@@ -66,6 +66,7 @@
     <Compile Include="Assets\TestCreate\TestCreate.cs" />
     <Compile Include="Assets\TestDontDestory\s1.cs" />
     <Compile Include="Assets\TestInput\PlayerInput.cs" />
+    <Compile Include="Assets\TestMonoBehaviour\TestMonoBehaviour.cs" />
     <Compile Include="Assets\TestPlayerPrefs\TestPlayerPrefs.cs" />
     <Compile Include="Assets\TestRay\RaycastScript.cs" />
     <Compile Include="Assets\TestTransform\CubeScript.cs" />
