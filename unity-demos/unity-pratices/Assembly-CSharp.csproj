@@ -60,6 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Example\ProcedureExample.cs" />
+    <Compile Include="Assets\OdinTest\1. TestAssetsOnlyAttribute\TestAssetsOnlyAttribute.cs" />
     <Compile Include="Assets\TestCollider\MovementScript.cs" />
     <Compile Include="Assets\TestCollider\TestRay.cs" />
     <Compile Include="Assets\TestCollider\TriggerScript.cs" />
@@ -372,6 +373,24 @@
     <Reference Include="UnityEngine.XRModule">
       <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
     </Reference>
+    <Reference Include="Sirenix.OdinInspector.Editor">
+      <HintPath>/Users/luning/workspace/self/code/UnityPratice/unity-demos/unity-pratices/Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Sirenix.Utilities.Editor">
+      <HintPath>/Users/luning/workspace/self/code/UnityPratice/unity-demos/unity-pratices/Assets/Plugins/Sirenix/Assemblies/Sirenix.Utilities.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Sirenix.Utilities">
+      <HintPath>/Users/luning/workspace/self/code/UnityPratice/unity-demos/unity-pratices/Assets/Plugins/Sirenix/Assemblies/Sirenix.Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="Sirenix.Serialization">
+      <HintPath>/Users/luning/workspace/self/code/UnityPratice/unity-demos/unity-pratices/Assets/Plugins/Sirenix/Assemblies/Sirenix.Serialization.dll</HintPath>
+    </Reference>
+    <Reference Include="Sirenix.Serialization.Config">
+      <HintPath>/Users/luning/workspace/self/code/UnityPratice/unity-demos/unity-pratices/Assets/Plugins/Sirenix/Assemblies/Sirenix.Serialization.Config.dll</HintPath>
+    </Reference>
+    <Reference Include="Sirenix.OdinInspector.Attributes">
+      <HintPath>/Users/luning/workspace/self/code/UnityPratice/unity-demos/unity-pratices/Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Attributes.dll</HintPath>
+    </Reference>
     <Reference Include="ICSharpCode.SharpZipLib">
       <HintPath>/Users/luning/workspace/self/code/UnityPratice/unity-demos/unity-pratices/Assets/GameFramework/Libraries/ICSharpCode.SharpZipLib.dll</HintPath>
     </Reference>
@@ -386,24 +405,6 @@
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
       <HintPath>/Users/luning/workspace/self/code/UnityPratice/unity-demos/unity-pratices/Library/PackageCache/com.unity.analytics@3.3.5/AnalyticsStandardEvents/Unity.Analytics.StandardEvents.dll</HintPath>
-    </Reference>
-    <Reference Include="Sirenix.Serialization">
-      <HintPath>/Users/luning/workspace/self/code/UnityPratice/unity-demos/unity-pratices/Assets/Plugins/Sirenix/Assemblies/Sirenix.Serialization.dll</HintPath>
-    </Reference>
-    <Reference Include="Sirenix.Utilities">
-      <HintPath>/Users/luning/workspace/self/code/UnityPratice/unity-demos/unity-pratices/Assets/Plugins/Sirenix/Assemblies/Sirenix.Utilities.dll</HintPath>
-    </Reference>
-    <Reference Include="Sirenix.Utilities.Editor">
-      <HintPath>/Users/luning/workspace/self/code/UnityPratice/unity-demos/unity-pratices/Assets/Plugins/Sirenix/Assemblies/Sirenix.Utilities.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Sirenix.OdinInspector.Editor">
-      <HintPath>/Users/luning/workspace/self/code/UnityPratice/unity-demos/unity-pratices/Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Sirenix.OdinInspector.Attributes">
-      <HintPath>/Users/luning/workspace/self/code/UnityPratice/unity-demos/unity-pratices/Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Attributes.dll</HintPath>
-    </Reference>
-    <Reference Include="Sirenix.Serialization.Config">
-      <HintPath>/Users/luning/workspace/self/code/UnityPratice/unity-demos/unity-pratices/Assets/Plugins/Sirenix/Assemblies/Sirenix.Serialization.Config.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
@@ -765,10 +766,6 @@
       <Project>{32134E39-46AA-32A8-CA8F-876F34C3B7C1}</Project>
       <Name>UnityGameFramework.Runtime</Name>
     </ProjectReference>
-    <ProjectReference Include="UnityGameFramework.Editor.csproj">
-      <Project>{07B6BB39-4D2B-BF59-085A-D6BD52031C4A}</Project>
-      <Name>UnityGameFramework.Editor</Name>
-    </ProjectReference>
     <ProjectReference Include="Sirenix.OdinInspector.CompatibilityLayer.Editor.csproj">
       <Project>{4C8CCC78-E6BE-C523-FF1C-13CA0D08776E}</Project>
       <Name>Sirenix.OdinInspector.CompatibilityLayer.Editor</Name>
@@ -776,6 +773,10 @@
     <ProjectReference Include="Sirenix.OdinInspector.CompatibilityLayer.csproj">
       <Project>{0E77CC59-8FA1-3518-793D-61EE1A30E01A}</Project>
       <Name>Sirenix.OdinInspector.CompatibilityLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityGameFramework.Editor.csproj">
+      <Project>{07B6BB39-4D2B-BF59-085A-D6BD52031C4A}</Project>
+      <Name>UnityGameFramework.Editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
