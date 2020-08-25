@@ -126,6 +126,7 @@
     <None Include="Assets\XLua\Resources\xlua\util.lua.txt" />
     <None Include="Assets\GameFramework\Libraries\link.xml" />
     <None Include="Assets\GameFramework\Libraries\GameFramework.xml" />
+    <None Include="Assets\UnityShaderTest\shader1.shader" />
     <None Include="Assets\XLua\Resources\perf\profiler.lua.txt" />
     <None Include="Assets\XLua\Resources\perf\memory.lua.txt" />
     <None Include="Assets\XLua\Examples\03_UIEvent\ButtonInteraction.lua.txt" />
