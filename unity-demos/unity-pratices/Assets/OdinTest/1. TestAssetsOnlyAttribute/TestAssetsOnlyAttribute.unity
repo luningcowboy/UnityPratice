@@ -219,10 +219,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnlyPrefabs:
   - {fileID: 144198, guid: dbfc57f47cf3853418df75ee656fdf90, type: 3}
+  - {fileID: 0}
   SomePrefab: {fileID: 144198, guid: dbfc57f47cf3853418df75ee656fdf90, type: 3}
   MaterialAsset: {fileID: 0}
   SomeMeshRenderOnPrefab:
   - {fileID: 153604, guid: 18c683fc899b71146b50b40d8d5fe57a, type: 3}
+  - {fileID: 0}
   OnlySceneObjects:
   - {fileID: 732920346}
   SomeSceneObject: {fileID: 732920346}
