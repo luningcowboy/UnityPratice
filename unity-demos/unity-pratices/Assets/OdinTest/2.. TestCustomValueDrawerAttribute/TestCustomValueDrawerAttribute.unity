@@ -221,7 +221,7 @@ MonoBehaviour:
   NoLableName: 
   Max: 100
   Min: 0
-  CustomDrawerStatic: 0
+  CustomDrawerStatic: 5.02
 --- !u!1 &1475307907
 GameObject:
   m_ObjectHideFlags: 0
