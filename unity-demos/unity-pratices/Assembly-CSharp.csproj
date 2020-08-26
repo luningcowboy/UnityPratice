@@ -62,6 +62,7 @@
     <Compile Include="Assets\Example\ProcedureExample.cs" />
     <Compile Include="Assets\OdinTest\1. TestAssetsOnlyAttribute\TestAssetsOnlyAttribute.cs" />
     <Compile Include="Assets\OdinTest\2.. TestCustomValueDrawerAttribute\TestCustomValueDrawerAttribute.cs" />
+    <Compile Include="Assets\OdinTest\3. Delayed Property Attribute\DelayedPropertyAttribute.cs" />
     <Compile Include="Assets\TestCollider\MovementScript.cs" />
     <Compile Include="Assets\TestCollider\TestRay.cs" />
     <Compile Include="Assets\TestCollider\TriggerScript.cs" />
