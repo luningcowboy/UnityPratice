@@ -217,11 +217,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a6d0b4b322f8494bbaae58800a36677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CustomDrawerInstance: 0
+  CustomDrawerStatic: 5.02
   HaveLableName: 
   NoLableName: 
   Max: 100
   Min: 0
-  CustomDrawerStatic: 5.02
 --- !u!1 &1475307907
 GameObject:
   m_ObjectHideFlags: 0
