@@ -218,6 +218,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   field: 11213131
+  fieldDelay: 5
 --- !u!1 &1661212097
 GameObject:
   m_ObjectHideFlags: 0
