@@ -60,6 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Example\ProcedureExample.cs" />
+    <Compile Include="Assets\OdinTest\0.TestMain\OdinAssetsOnlyAttribute.cs" />
     <Compile Include="Assets\OdinTest\1. TestAssetsOnlyAttribute\TestAssetsOnlyAttribute.cs" />
     <Compile Include="Assets\OdinTest\2.. TestCustomValueDrawerAttribute\TestCustomValueDrawerAttribute.cs" />
     <Compile Include="Assets\OdinTest\3. Delayed Property Attribute\DelayedPropertyAttribute.cs" />
