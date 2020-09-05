@@ -17,7 +17,6 @@ local _M = {
     end
 }
 setmetatable(Dic, _M)
---[[
 --Test
 local a = Dic()
 local b = Dic()
@@ -32,6 +31,5 @@ end
 b[#b+1] = nil
 b.a = nil
 print("b:" .. #b)
-]]
 
 return Dic
