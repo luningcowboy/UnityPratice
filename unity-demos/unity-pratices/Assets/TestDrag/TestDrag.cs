@@ -11,6 +11,7 @@ public class TestDrag : MonoBehaviour,
     IBeginDragHandler,
     IEndDragHandler
 {
+    public RectTransform itemRoot = null;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +27,10 @@ public class TestDrag : MonoBehaviour,
     public void OnPointerClick(PointerEventData eventData)
     {
         print($"OnPointerClick{eventData.position.x} {eventData.position.y}");
+        var pos = new Vector2(0,0);
+        var screenPos = new Vector2(eventData.position.x, eventData.position.y);
+        var ok = RectTransformUtility.ScreenPointToLocalPointInRectangle(itemRoot,screenPos,Camera.main, out pos);
+        print($"x={pos.x},y = {pos.y}");
     }
 
     public void OnPointerEnter(PointerEventData eventData)
@@ -41,8 +46,14 @@ public class TestDrag : MonoBehaviour,
     public void OnDrag(PointerEventData eventData)
     {
         print($"OnDrag{eventData.position.x} {eventData.position.y}");
-        transform.position = eventData.position;
-        
+        //transform.position = eventData.position;
+        var screenPos = new Vector2(eventData.position.x, eventData.position.y);
+        var ok = RectTransformUtility.ScreenPointToLocalPointInRectangle(itemRoot,screenPos,Camera.main, out var pos);
+        print($"x={pos.x},y = {pos.y}");
+        var rtrans = GetComponent<RectTransform>();
+        rtrans.anchoredPosition = pos;
+
+
     }
 
     public void OnBeginDrag(PointerEventData eventData)
