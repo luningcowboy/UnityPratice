@@ -4,11 +4,16 @@ end
 local function arrayEach(arr, iteratee)
     local idx = -1
     local len = #arr
-    while addAdd(idx)< length do
-        local stat, ret = xpcall(iteratee,function(err) print(err)end, arr[idx], idx, arr)
+    idx = idx + 1
+    while idx < length do
+        local stat, ret = pcall(iteratee, arr[idx], idx, arr)
+        if not stat then
+            error("arrayEach iteratee failed")
+        end
         if not ret then
             break
         end
+        idx = idx + 1
     end
     return arr
 end
