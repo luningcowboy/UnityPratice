@@ -7,6 +7,7 @@ local _keys = {}
 -- 函数声明
 local Init
 local Bind
+local InitKeys
 local _bindDefault
 local _bindName
 local _bindDesc
@@ -17,6 +18,10 @@ local GetDataByKeys
 function Init()
     _data = require 'data'
     Bind()
+    InitKeys()
+end
+
+function InitKeys()
     local keys = _data.key
     for k, v in pairs(keys) do
         _keys[#_keys + 1] = k
