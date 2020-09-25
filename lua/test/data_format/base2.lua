@@ -1,6 +1,7 @@
 local assert = assert
 
-local function Base(dataName)
+----基础类，用闭包实现，不支持继承
+local function BaseData(dataName)
     -- attribute
     local _data = {}
     local _binds = {}
@@ -104,15 +105,17 @@ local function Base(dataName)
     return export
 end
 ----------------------------------
+--数据实现，每个excel对应一个BaseData,
+--BaseData只提供必要的接口，不支持扩展，扩展在Collect中做
 local DataCollect = {}
 local _datas = {}
-local _dataKeys = {'data.lu', 'data'}
+local _dataKeys = {'data', 'data'}
 local _bindName
 
 local function Init()
     _datas = {}
     for _, v in pairs(_dataKeys) do
-        _datas[v] = Base(v)
+        _datas[v] = BaseData(v)
         _datas[v].Init()
     end
     DoBind()
@@ -139,22 +142,3 @@ end
 DataCollect.Init = Init
 DataCollect.GetDataByDataKey = GetDataByDataKey
 DataCollect.DoBind = DoBind
-
-
---[[
-local d1 = Base('data')
-d1.Init()
-d1.Bind('name', function(v) return 'name:' .. v end)
-d1.Bind('desc', function(v) return 'DESC:' .. v end)
-
-local a = d1.GetDataByKeys(1)
-for k, v in pairs(a) do
-    print('a1:', k, v)
-end
-
-local a2 = d1.GetDataByKeys(1, {'name', 'desc'})
-for k, v in pairs(a2) do
-    print('a2:', k, v)
-end
-
-]]
