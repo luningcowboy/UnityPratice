@@ -123,6 +123,7 @@ end
 
 local function GetDataByDataKey(tempId, selectKeys, key)
     if not key then
+        key = _dataKeys[0]
     end
     local data = _datas[key]
     assert(data, 'GetDataByDataKey failed')
